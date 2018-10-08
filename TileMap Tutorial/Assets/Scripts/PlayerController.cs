@@ -15,11 +15,6 @@ public class PlayerController : MonoBehaviour {
         rb2d = GetComponent<Rigidbody2D>();	
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
     void FixedUpdate()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
@@ -28,10 +23,8 @@ public class PlayerController : MonoBehaviour {
 
         rb2d.AddForce(movement * speed);
 
-        if (Input.GetKey("escape")) ;
-        {
+        if (Input.GetKey("escape")) 
             Application.Quit();
-        }
     }
 
     void OnCollisionStay2D(Collision2D collision)
